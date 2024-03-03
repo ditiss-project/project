@@ -14,7 +14,7 @@ pipeline{
         }
         stage('Checkout from Git'){
             steps{
-                git branch: 'master', url: 'https://github.com/C1-80247/final-project.git'
+                git branch: 'master', url: 'https://github.com/ditiss-project/project.git'
             }
         }
         stage("Sonarqube Analysis "){
