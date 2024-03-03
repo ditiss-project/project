@@ -32,13 +32,6 @@ pipeline{
                 dependencyCheckPublisher pattern: '**/dependency-check-report.xml'
             }
         }
-     
-        stage('Code'){
-              steps{
-                 git url: 'https://github.com/UtkanshAdlakha123/final-repo.git', branch: 'master'
-                 echo 'cloning the code'
-             }
-         }
          
          stage('Copying content'){
              steps{
@@ -59,7 +52,7 @@ pipeline{
                 emailext (
                     subject: "Jenkins Build status:  ${currentBuild.result}: ${env.JOB_NAME}",
                     body: "Build status:  ${currentBuild.result} for ${env.JOB_NAME}: ${env.BUILD_URL}",
-                    to: "adlakhautkansh22@gmail.com",
+                    to: "aniketdahake050@gmail.com",
                     from: "jenkins@example.com",
                     mimeType: "text/html"
                 )
